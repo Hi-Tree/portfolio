@@ -12,7 +12,7 @@
 }
 
 body {
-  background-color: var(--color-primary);
+  background-color: rgb(36, 34, 34);
   font-family: "Jersey 25", sans-serif;
   font-size: 1.1rem;
   color: var(--color-white);
@@ -74,13 +74,11 @@ section {
 
 .controls {
   position: fixed;
-  z-index: 30;
+  z-index: 10;
   top: 50%;
   right: 3%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   transform: translateY(-50%);
 }
 
@@ -94,4 +92,16 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0.7rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.control:hover {
+  box-shadow: 3px 3px 3px 3px rgb(60, 87, 21);
+  transition: all 0.1s ease-in-out;
+}
+
+.active-btn {
+  background-color: rgb(105, 212, 105);
+  transition: all 0.4s ease-in-out;
 }/*# sourceMappingURL=stye.css.map */
