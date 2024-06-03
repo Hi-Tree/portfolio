@@ -1,15 +1,35 @@
-const controls = document.querySelectorAll(".controls");
+const controls = document.querySelector(".controls");
 const control = document.querySelectorAll(".control");
+const allSections = document.querySelector(".main-content");
+const sections = document.querySelectorAll(".section");
 
-function pageTransitions(){
-    //remove the activebutton class on the buttons that are not selected
-    for(let i = 0; i<control.length; i++){
-        control[i].addEventListener("click",function(){
-            let curActiveBtn = document.querySelectorAll(".active-btn");
-            curActiveBtn[0].className = curActiveBtn[0].className.replace("active-btn","");
-            this.className += ' active-btn';
+function pageTransitions() {
+    // Remove the active button class on the buttons that are not selected
+    control.forEach((btn) => {
+        btn.addEventListener("click", function () {
+            const curActiveBtn = document.querySelector(".active-btn");
+            if (curActiveBtn) {
+                curActiveBtn.classList.remove("active-btn");
+            }
+            this.classList.add("active-btn");
+
+            const id = this.dataset.id;
+            console.log(id);
+            if (id) {
+                // Remove active class from all sections
+                sections.forEach((section) => {
+                    section.classList.remove('active');
+                })
+
+                // Add active class to the corresponding section
+                const element = document.getElementById(id);
+                
+                element.classList.add('active');
+            }
+
         });
-    }
+    });
+
 }
 
 pageTransitions();

@@ -49,27 +49,36 @@ section {
 
 .sec1 {
   display: none;
-  transform: translateY(0) scale(0);
+  transform: translateY(0) scale(1);
+  background-color: yellow;
 }
 
 .sec2 {
   display: none;
-  transform: translateY(0) scale(0);
+  transform: translateY(0) scale(1);
+  background-color: aqua;
 }
 
 .sec3 {
   display: none;
-  transform: translateY(0) scale(0);
+  transform: translateY(0) scale(1);
+  background-color: red;
 }
 
 .sec4 {
   display: none;
-  transform: translateY(0) scale(0);
+  transform: translateY(0) scale(1);
+  background-color: orange;
 }
 
 .sec5 {
   display: none;
-  transform: translateY(0) scale(0);
+  transform: translateY(0) scale(1);
+  background-color: pink;
+}
+
+.active {
+  display: block;
 }
 
 .controls {
