@@ -9,10 +9,19 @@
         <servlet-name>example</servlet-name>
         <servlet-class>example</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DownloadServlet</servlet-name>
+        <servlet-class>DownloadServlet</servlet-class>
+    </servlet>
     
     <servlet-mapping>
         <servlet-name>example</servlet-name>
         <url-pattern>/example</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DownloadServlet</servlet-name>
+        <url-pattern>/DownloadServlet</url-pattern>
     </servlet-mapping>
     
 </web-app>

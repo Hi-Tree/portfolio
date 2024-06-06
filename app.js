@@ -33,3 +33,7 @@ function pageTransitions() {
 }
 
 pageTransitions();
+
+document.getElementById('downloadButton').addEventListener('click', function() {
+    window.location.href = '/portfolio/DownloadServlet'; // Redirect to the servlet endpoint
+});
